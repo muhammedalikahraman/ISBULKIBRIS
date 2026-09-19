@@ -22,12 +22,12 @@ jobs:
             package-lock.json
             apps/web/package-lock.json
       - name: Install data package
-        run: npm ci
+        run: npm install
       - name: RLS on every public table
         run: node scripts/assert-rls-migrations.mjs
       - name: Install web
         working-directory: apps/web
-        run: npm ci
+        run: npm install
       - name: Typecheck data
         run: npx tsc --noEmit -p tsconfig.json
       - name: Next build
