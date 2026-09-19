@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit",
     "dev": "cd apps/web && npm run dev",
     "build": "cd apps/web && npm run build",
-    "start": "cd apps/web && npm start"
+    "start": "cd apps/web && npm start",
+    "vercel-build": "cd apps/web && npm run build"
   },
   "peerDependencies": {
     "zod": "^3.23.0 || ^4.0.0"
