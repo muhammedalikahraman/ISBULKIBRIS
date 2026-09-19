@@ -1,9 +1,9 @@
 import { jobSearchSchema, type LocaleCode } from "@isbulkibris/data";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Link } from "@/i18n/navigation";
 import { repos } from "@/lib/repos";
 import { hreflangMap, localeUrl } from "@/lib/site";
+import JobListPage from "@/components/JobListPage";
 
 export const dynamic = "force-dynamic";
 
@@ -34,8 +34,6 @@ export default async function JobsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("jobs");
-  const tNav = await getTranslations("nav");
   const raw = await searchParams;
   const parsed = jobSearchSchema.safeParse({
     locale,
@@ -56,27 +54,11 @@ export default async function JobsPage({
   ]);
 
   return (
-    <section>
-      <h1 className="text-2xl font-semibold">{tNav("jobs")}</h1>
-      <p className="mt-1 text-sm text-stone-500">
-        {cities.length} şehir · {categories.length} kategori
-      </p>
-      {result.items.length === 0 ? (
-        <p className="mt-8 text-stone-600">{t("empty")}</p>
-      ) : (
-        <ul className="mt-6 space-y-3">
-          {result.items.map((job) => (
-            <li key={job.id} className="rounded-lg border border-stone-200 bg-white p-4">
-              <Link href={`/ilan/${job.slug}`} className="font-medium">
-                {job.title}
-              </Link>
-              <p className="text-sm text-stone-600">
-                {job.organizationName} · {job.citySlug}
-              </p>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+    <JobListPage
+      jobs={result.items}
+      cities={cities}
+      categories={categories}
+      locale={locale}
+    />
   );
 }

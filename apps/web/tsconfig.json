@@ -26,6 +26,9 @@
       "@/*": [
         "./*"
       ],
+      "@/components/*": [
+        "./components/*"
+      ],
       "@isbulkibris/data": ["./src/index.ts"],
       "@isbulkibris/data/server": ["./src/server/index.ts"]
     }

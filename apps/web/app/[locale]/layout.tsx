@@ -49,17 +49,68 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <header className="border-b border-stone-200 bg-white">
-            <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-              <Link href="/" className="font-semibold">
-                {tSite("name")}
+          {/* Professional Header */}
+          <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary-500/20 shadow-sm">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+              <Link href="/" className="flex items-center gap-2 group">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-primary-glow group-hover:scale-105 transition-transform">
+                  <span className="text-white font-bold text-lg">İ</span>
+                </div>
+                <span className="font-bold text-xl text-text-primary bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent">
+                  {tSite("name")}
+                </span>
               </Link>
-              <Link href="/ilanlar" className="text-sm">
-                {tNav("jobs")}
-              </Link>
+              
+              <div className="flex items-center gap-4">
+                <Link 
+                  href="/ilanlar" 
+                  className="px-4 py-2 rounded-lg text-sm font-medium text-text-primary hover:bg-primary-500/10 transition-colors"
+                >
+                  {tNav("jobs")}
+                </Link>
+                <Link 
+                  href="/ilanlar" 
+                  className="px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg text-sm font-medium shadow-primary-glow hover:shadow-lg transition-all"
+                >
+                  İşveren Girişi
+                </Link>
+              </div>
             </nav>
           </header>
-          <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+          
+          {/* Main Content */}
+          <main className="min-h-screen">{children}</main>
+          
+          {/* Professional Footer */}
+          <footer className="bg-gradient-to-br from-surface-light to-surface-cream border-t border-primary-500/20">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="md:col-span-2">
+                  <h3 className="text-xl font-bold text-text-primary mb-4">{tSite("name")}</h3>
+                  <p className="text-text-secondary text-sm mb-4">
+                    Kıbrıs'ın önde gelen profesyonel iş istihdam platformu
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-text-primary mb-4">Hızlı Linkler</h4>
+                  <ul className="space-y-2 text-sm text-text-secondary">
+                    <li><Link href="/ilanlar" className="hover:text-primary-500 transition-colors">İlanlar</Link></li>
+                    <li><Link href="/" className="hover:text-primary-500 transition-colors">Ana Sayfa</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-text-primary mb-4">İletişim</h4>
+                  <ul className="space-y-2 text-sm text-text-secondary">
+                    <li>info@isbulkibris.com</li>
+                    <li>Lefkoşa, KKTC</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-text-secondary">
+                <p>© 2026 {tSite("name")}. Tüm hakları saklıdır.</p>
+              </div>
+            </div>
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>
