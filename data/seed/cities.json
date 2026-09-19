@@ -1,0 +1,18 @@
+{
+  "regions": [
+    { "slug": "lefkosa", "names": { "tr": "Lefkoşa", "en": "Nicosia", "ru": "Никосия", "he": "ניקוסיה" } },
+    { "slug": "girne", "names": { "tr": "Girne", "en": "Kyrenia", "ru": "Кирения", "he": "קירניה" } },
+    { "slug": "gazimagusa", "names": { "tr": "Gazimağusa", "en": "Famagusta", "ru": "Фамагуста", "he": "פמגוסטה" } },
+    { "slug": "guzelyurt", "names": { "tr": "Güzelyurt", "en": "Morphou", "ru": "Морфу", "he": "מורפו" } },
+    { "slug": "iskele", "names": { "tr": "İskele", "en": "Trikomo", "ru": "Трикомо", "he": "טריקומו" } },
+    { "slug": "lefke", "names": { "tr": "Lefke", "en": "Lefka", "ru": "Лефка", "he": "לפקה" } }
+  ],
+  "cities": [
+    { "slug": "lefkosa", "region": "lefkosa", "names": { "tr": "Lefkoşa", "en": "Nicosia", "ru": "Никосия", "he": "ניקוסיה" } },
+    { "slug": "girne", "region": "girne", "names": { "tr": "Girne", "en": "Kyrenia", "ru": "Кирения", "he": "קירניה" } },
+    { "slug": "gazimagusa", "region": "gazimagusa", "names": { "tr": "Gazimağusa", "en": "Famagusta", "ru": "Фамагуста", "he": "פמגוסטה" } },
+    { "slug": "guzelyurt", "region": "guzelyurt", "names": { "tr": "Güzelyurt", "en": "Morphou", "ru": "Морфу", "he": "מורפו" } },
+    { "slug": "iskele", "region": "iskele", "names": { "tr": "İskele", "en": "Trikomo", "ru": "Трикомо", "he": "טריקומו" } },
+    { "slug": "lefke", "region": "lefke", "names": { "tr": "Lefke", "en": "Lefka", "ru": "Лефка", "he": "לפקה" } }
+  ]
+}

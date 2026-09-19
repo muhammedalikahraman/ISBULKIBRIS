@@ -1,0 +1,16 @@
+{
+  "categories": [
+    { "slug": "sales", "names": { "tr": "Satış", "en": "Sales", "ru": "Продажи", "he": "מכירות" } },
+    { "slug": "hospitality", "names": { "tr": "Turizm ve otelcilik", "en": "Hospitality", "ru": "Гостиничный бизнес", "he": "אירוח" } },
+    { "slug": "it", "names": { "tr": "Bilişim", "en": "IT", "ru": "IT", "he": "הייטק" } },
+    { "slug": "construction", "names": { "tr": "İnşaat", "en": "Construction", "ru": "Строительство", "he": "בנייה" } },
+    { "slug": "education", "names": { "tr": "Eğitim", "en": "Education", "ru": "Образование", "he": "חינוך" } },
+    { "slug": "healthcare", "names": { "tr": "Sağlık", "en": "Healthcare", "ru": "Здравоохранение", "he": "בריאות" } },
+    { "slug": "admin", "names": { "tr": "Ofis ve idari", "en": "Admin", "ru": "Администрация", "he": "מנהלה" } },
+    { "slug": "finance", "names": { "tr": "Muhasebe ve finans", "en": "Finance", "ru": "Финансы", "he": "כספים" } },
+    { "slug": "retail", "names": { "tr": "Perakende", "en": "Retail", "ru": "Розничная торговля", "he": "קמעונאות" } },
+    { "slug": "logistics", "names": { "tr": "Lojistik", "en": "Logistics", "ru": "Логистика", "he": "לוגיסטיקה" } },
+    { "slug": "legal", "names": { "tr": "Hukuk", "en": "Legal", "ru": "Юриспруденция", "he": "משפטים" } },
+    { "slug": "other", "names": { "tr": "Diğer", "en": "Other", "ru": "Другое", "he": "אחר" } }
+  ]
+}

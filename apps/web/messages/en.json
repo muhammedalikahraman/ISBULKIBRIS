@@ -1,0 +1,22 @@
+{
+  "site": {
+    "name": "IsBulKibris",
+    "tagline": "Jobs in Northern Cyprus - Best career opportunities"
+  },
+  "nav": {
+    "jobs": "Jobs",
+    "employer": "Employer"
+  },
+  "jobs": {
+    "empty": "No live jobs right now.",
+    "apply": "Apply"
+  },
+  "home": {
+    "candidates_title": "Candidates",
+    "candidates_desc": "Discover the best job opportunities in Northern Cyprus",
+    "employers_title": "Employers",
+    "employers_desc": "Find and hire the most talented candidates",
+    "fast_title": "Fast",
+    "fast_desc": "Easy and quick job application process"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "site": {
+    "name": "İşBulKıbrıs",
+    "tagline": "Kuzey Kıbrıs iş ilanları - En iyi kariyer fırsatları"
+  },
+  "nav": {
+    "jobs": "İlanlar",
+    "employer": "İşveren"
+  },
+  "jobs": {
+    "empty": "Şu an yayında ilan yok.",
+    "apply": "Başvur"
+  },
+  "home": {
+    "candidates_title": "Adaylar",
+    "candidates_desc": "Kuzey Kıbrıs'teki en iyi iş fırsatlarını keşfedin",
+    "employers_title": "İşverenler",
+    "employers_desc": "En yetenekli adayları bulun ve işe alın",
+    "fast_title": "Hızlı",
+    "fast_desc": "Kolay ve hızlı iş başvuru süreci"
+  }
+}

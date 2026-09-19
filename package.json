@@ -1,0 +1,28 @@
+{
+  "name": "@isbulkibris/data",
+  "private": true,
+  "version": "0.1.0",
+  "description": "İşBulKıbrıs veri sözleşmeleri — şema, Zod, repository portları. Uygulama veya demo içermez.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./contracts": "./src/contracts/index.ts",
+    "./repositories": "./src/repositories/index.ts",
+    "./server": "./src/server/index.ts"
+  },
+  "scripts": {
+    "sync-seed": "node scripts/sync-seed.mjs",
+    "assert-rls": "node scripts/assert-rls-migrations.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "zod": "^3.23.0 || ^4.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

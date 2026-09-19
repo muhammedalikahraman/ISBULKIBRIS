@@ -1,0 +1,11 @@
+node_modules
+.next
+.turbo
+.env
+.env.local
+apps/web/.next
+apps/web/node_modules
+supabase/.temp
+supabase/.branches
+*.log
+.DS_Store

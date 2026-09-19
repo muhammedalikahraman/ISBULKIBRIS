@@ -1,0 +1,12 @@
+{
+  "skills": [
+    { "slug": "turkish", "names": { "tr": "Türkçe", "en": "Turkish", "ru": "Турецкий", "he": "טורקית" } },
+    { "slug": "english", "names": { "tr": "İngilizce", "en": "English", "ru": "Английский", "he": "אנגלית" } },
+    { "slug": "russian", "names": { "tr": "Rusça", "en": "Russian", "ru": "Русский", "he": "רוסית" } },
+    { "slug": "greek", "names": { "tr": "Yunanca", "en": "Greek", "ru": "Греческий", "he": "יוונית" } },
+    { "slug": "excel", "names": { "tr": "Excel", "en": "Excel", "ru": "Excel", "he": "Excel" } },
+    { "slug": "customer-service", "names": { "tr": "Müşteri hizmetleri", "en": "Customer service", "ru": "Обслуживание клиентов", "he": "שירות לקוחות" } },
+    { "slug": "sales", "names": { "tr": "Satış", "en": "Sales", "ru": "Продажи", "he": "מכירות" } },
+    { "slug": "driving-license", "names": { "tr": "Ehliyet", "en": "Driving licence", "ru": "Водительские права", "he": "רישיון נהיגה" } }
+  ]
+}
