@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { hreflangMap, localeUrl } from "@/lib/site";
-import { CategoryCard, HeroOrb, HomeSearch, PopularLink } from "./home-client";
+import { CategoryCard, CyprusMap, HomeSearch, PopularLink } from "./home-client";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -27,7 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <HomeSearch locale={locale} labels={{ queryPlaceholder: "Pozisyon, beceri veya şirket ara", cityPlaceholder: "Şehir seç", search: "İlan ara" }} />
         <div className="hero-trust"><span className="trust-avatars"><i>A</i><i>N</i><i>İ</i></span><span>Her gün yeni fırsatlar ekleniyor</span><b>✦</b><span>Güvenli ve ücretsiz</span></div>
       </div>
-      <div className="hero-visual"><div className="visual-sheen" /><div className="visual-grid" aria-hidden="true" /><HeroOrb /><div className="floating-note note-top"><span>●</span><div><strong>Güncel</strong><small>yeni fırsatlar</small></div></div><div className="floating-note note-bottom"><span>↗</span><div><strong>Yerel ağ</strong><small>tek platformda</small></div></div><div className="visual-caption">KIBRIS<br /><strong>İÇİN TASARLANDI</strong></div></div>
+      <div className="hero-visual"><div className="visual-sheen" /><div className="visual-grid" aria-hidden="true" /><CyprusMap locale={locale} /><div className="floating-note note-top"><span>●</span><div><strong>Güncel</strong><small>yeni fırsatlar</small></div></div><div className="floating-note note-bottom"><span>↗</span><div><strong>Yerel ağ</strong><small>tek platformda</small></div></div><div className="visual-caption">KIBRIS<br /><strong>İÇİN TASARLANDI</strong></div></div>
     </section>
 
     <section className="section-block" id="ilanlar" aria-labelledby="categories-title">
