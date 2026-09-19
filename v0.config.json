@@ -1,0 +1,36 @@
+{
+  "name": "isbulkibris",
+  "description": "İşBulKıbrıs - Kıbrıs iş ilanları platformu",
+  "version": "1.0.0",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "rootDirectory": "apps/web",
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://your-project.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "your-anon-key",
+    "NEXT_PUBLIC_SITE_URL": "http://localhost:3000"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "description": "Ana sayfa - İş ilanları listesi"
+    },
+    {
+      "path": "/ilanlar",
+      "description": "Tüm iş ilanları"
+    },
+    {
+      "path": "/ilan/[slug]",
+      "description": "İş ilanı detayları"
+    }
+  ],
+  "features": [
+    "multi-language",
+    "supabase-integration",
+    "responsive-design",
+    "job-posting-system"
+  ]
+}
