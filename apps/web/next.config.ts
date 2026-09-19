@@ -6,9 +6,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const appDir = path.dirname(fileURLToPath(import.meta.url));
 
+const previewOrigin = process.env.BASE44_PUBLIC_HOST_SUFFIX
+  ? `3000-${process.env.BASE44_PUBLIC_HOST_SUFFIX}`
+  : undefined;
+
 const nextConfig: NextConfig = {
   transpilePackages: ["@isbulkibris/data"],
   turbopack: { root: appDir },
+  allowedDevOrigins: previewOrigin ? [previewOrigin] : [],
   
   // Performance optimizations
   compress: true,

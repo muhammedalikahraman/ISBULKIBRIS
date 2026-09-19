@@ -1,0 +1,86 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  db-setup:
+    image: postgres:15
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./:/app
+    environment:
+      PGPASSWORD: postgres
+    command: >
+      sh -c '
+        psql -h db -U postgres -v ON_ERROR_STOP=1 -f /app/supabase/base44-stub.sql &&
+        for f in /app/supabase/migrations/000*.sql /app/supabase/migrations/001*.sql; do
+          echo "Applying $$(basename $$f)" &&
+          psql -h db -U postgres -v ON_ERROR_STOP=1 -f "$$f" || exit 1;
+        done &&
+        psql -h db -U postgres -v ON_ERROR_STOP=1 -f /app/supabase/seed.sql &&
+        psql -h db -U postgres -v ON_ERROR_STOP=1 -f /app/supabase/base44-grants.sql &&
+        echo "Database setup complete"
+      '
+    restart: "no"
+
+  postgrest:
+    image: postgrest/postgrest:latest
+    depends_on:
+      db-setup:
+        condition: service_completed_successfully
+    environment:
+      PGRST_DB_URI: postgres://authenticator:postgres@db:5432/postgres
+      PGRST_DB_SCHEMA: public
+      PGRST_JWT_SECRET: base44-local-dev-secret-not-for-production
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_DB_CHANNEL: ""
+      PGRST_LOG_LEVEL: info
+    restart: unless-stopped
+
+  api:
+    image: nginx:alpine
+    depends_on:
+      postgrest:
+        condition: service_started
+    volumes:
+      - ./nginx-base44.conf:/etc/nginx/conf.d/default.conf:ro
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:8080/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  web:
+    image: node:22
+    working_dir: /app/apps/web
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - BASE44_PUBLIC_HOST_SUFFIX=${BASE44_PUBLIC_HOST_SUFFIX:-}
+      - WATCHPACK_POLLING=true
+    env_file:
+      - ./.env.base44-defaults
+      - /run/base44/app.env
+    command: sh -c "cd /app && npm install && cd apps/web && npm install && npx next dev -H 0.0.0.0 -p 3000"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
