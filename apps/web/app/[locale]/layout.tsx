@@ -49,17 +49,18 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <header className="border-b border-stone-200 bg-white">
-            <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-              <Link href="/" className="font-semibold">
-                {tSite("name")}
-              </Link>
-              <Link href="/ilanlar" className="text-sm">
-                {tNav("jobs")}
-              </Link>
+          <header className="topbar">
+            <nav>
+              <Link href="/" className="brand"><span className="brand-mark" aria-hidden="true">i</span>{tSite("name")}</Link>
+              <div className="nav-links">
+                <Link href="/ilanlar">{tNav("jobs")}</Link>
+                <a href="#ilanlar">Kategoriler</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <Link href="/ilanlar" className="nav-cta">{tNav("employer")} <span aria-hidden="true">↗</span></Link>
+              </div>
             </nav>
           </header>
-          <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+          <main>{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>
