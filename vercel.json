@@ -17,12 +17,6 @@
     "NEXT_PUBLIC_CLOUDFLARE_R2_ACCESS_KEY": "@cloudflare-r2-access-key",
     "NEXT_PUBLIC_CLOUDFLARE_R2_SECRET_KEY": "@cloudflare-r2-secret-key"
   },
-  "crons": [
-    {
-      "path": "/api/cron/facets",
-      "schedule": "*/10 * * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
