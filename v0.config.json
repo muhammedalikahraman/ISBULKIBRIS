@@ -9,9 +9,9 @@
   "installCommand": "npm install",
   "rootDirectory": "apps/web",
   "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "https://your-project.supabase.co",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "your-anon-key",
-    "NEXT_PUBLIC_SITE_URL": "http://localhost:3000"
+    "NEXT_PUBLIC_SUPABASE_URL": "https://rppginxblanrhjargeeb.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJwcWdpbnhibGFncmhqanJlZ2ViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk3OTk4NjgsImV4cCI6MjEwNTM3NTg2OH0.Tti46xD030lY3_eLEu3Z_e7wPcCM72Dq5Q_aI7EwNBs-",
+    "NEXT_PUBLIC_SITE_URL": "https://isbulkibris.vercel.app"
   },
   "routes": [
     {
