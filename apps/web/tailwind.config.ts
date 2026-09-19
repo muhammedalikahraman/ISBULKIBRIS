@@ -10,9 +10,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Adobe Spectrum 2 inspired design system
       colors: {
-        // Neutral grays
+        // ── Primary: Navy → Teal Blue (Coolors "Refreshing Summer Fun" 67.9K) ──
+        primary: {
+          50: '#F0F9FF',
+          100: '#E0F2FE',
+          200: '#BAE6FD',
+          300: '#8ECAE6',
+          400: '#4FC3F7',
+          500: '#219EBC',
+          600: '#0E7490',
+          700: '#0369A1',
+          800: '#0C4A6E',
+          900: '#023047',
+          950: '#082F49',
+        },
+        // ── Accent: Amber → Orange (Coolors "Refreshing Summer Fun" 67.9K) ──
+        accent: {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#FFB703',
+          600: '#FB8500',
+          700: '#D97706',
+          800: '#B45309',
+          900: '#92400E',
+          950: '#451A03',
+        },
+        // ── Neutral grays ──
         gray: {
           50: '#FAFAFA',
           100: '#F5F5F5',
@@ -26,21 +53,7 @@ const config: Config = {
           900: '#171717',
           950: '#0A0A0A',
         },
-        // Brand colors - professional and trustworthy
-        primary: {
-          50: '#FFF7ED',
-          100: '#FFEDD5',
-          200: '#FED7AA',
-          300: '#FDBA74',
-          400: '#FB923C',
-          500: '#F97316',
-          600: '#EA580C',
-          700: '#C2410C',
-          800: '#9A3412',
-          900: '#7C2D12',
-          950: '#431407',
-        },
-        // Semantic colors
+        // ── Semantic colors ──
         success: {
           50: '#F0FDF4',
           100: '#DCFCE7',
@@ -82,7 +95,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -93,7 +107,9 @@ const config: Config = {
         '2xl': ['1.5rem', { lineHeight: '2rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
+        '5xl': ['3rem', { lineHeight: '1.1' }],
+        '6xl': ['3.75rem', { lineHeight: '1.1' }],
+        '7xl': ['4.5rem', { lineHeight: '1.1' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -112,6 +128,54 @@ const config: Config = {
         'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
         'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
         'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+        'glow': '0 0 20px rgba(33, 158, 188, 0.3)',
+        'glow-accent': '0 0 20px rgba(255, 183, 3, 0.3)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'fade-in-down': 'fadeInDown 0.6s ease-out',
+        'slide-in-right': 'slideInRight 0.4s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'spin-slow': 'spin 3s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(33, 158, 188, 0.3)' },
+          '50%': { boxShadow: '0 0 30px rgba(33, 158, 188, 0.5)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
+        },
       },
     },
   },

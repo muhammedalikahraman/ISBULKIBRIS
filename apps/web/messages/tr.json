@@ -5,18 +5,59 @@
   },
   "nav": {
     "jobs": "İlanlar",
-    "employer": "İşveren"
+    "employer": "İşveren Girişi",
+    "home": "Ana Sayfa"
   },
   "jobs": {
     "empty": "Şu an yayında ilan yok.",
-    "apply": "Başvur"
+    "apply": "Başvuru Yap",
+    "next": "Sonraki",
+    "prev": "Önceki",
+    "page": "Sayfa"
+  },
+  "filters": {
+    "title": "Filtreler",
+    "city": "Şehir",
+    "category": "Kategori",
+    "remote": "Çalışma Türü",
+    "all_cities": "Tüm Şehirler",
+    "all_categories": "Tüm Kategoriler",
+    "all_types": "Tüm Türler",
+    "remote_opt_remote": "Uzaktan",
+    "remote_opt_hybrid": "Hibrit",
+    "remote_opt_onsite": "Ofiste",
+    "clear": "Temizle"
   },
   "home": {
+    "hero_badge": "Kuzey Kıbrıs'ın en büyük iş platformu",
+    "hero_title": "Kuzey Kıbrıs'ta Hayalinizdeki İşi Bulun",
+    "hero_subtitle": "Yüzlerce güncel ilan arasından size en uygun olanı keşfedin. Hızlı, kolay ve ücretsiz.",
+    "search_placeholder": "Pozisyon, anahtar kelime veya şirket ara...",
+    "search_city": "Şehir seçin",
+    "search_category": "Kategori seçin",
+    "search_button": "İlanları Ara",
+    "stat_employment": "Aktif İstihdam",
+    "stat_cities": "Şehir",
+    "stat_categories": "Kategori",
+    "features_title": "Neden İşBulKıbrıs?",
+    "features_subtitle": "Kuzey Kıbrıs'ta iş arayanlar ve işverenler için tasarlandı",
     "candidates_title": "Adaylar",
-    "candidates_desc": "Kuzey Kıbrıs'teki en iyi iş fırsatlarını keşfedin",
+    "candidates_desc": "Kuzey Kıbrıs'taki en iyi iş fırsatlarını keşfedin, tek tıkla başvurun",
     "employers_title": "İşverenler",
-    "employers_desc": "En yetenekli adayları bulun ve işe alın",
+    "employers_desc": "En yetenekli adayları bulun ve hızlıca işe alın",
     "fast_title": "Hızlı",
-    "fast_desc": "Kolay ve hızlı iş başvuru süreci"
+    "fast_desc": "Kolay ve hızlı iş başvuru süreci, anında geri bildirim",
+    "how_title": "Nasıl Çalışır?",
+    "how_subtitle": "Üç basit adımda iş bulma süreci",
+    "step1_title": "İlanları Keşfedin",
+    "step1_desc": "Şehir ve kategori filtreleriyle size uygun ilanları bulun",
+    "step2_title": "Başvurun",
+    "step2_desc": "Tek tıkla hızlı başvuru, CV'nizi paylaşın",
+    "step3_title": "İşe Başlayın",
+    "step3_desc": "İşverenlerle iletişime geçin ve kariyerinize başlayın",
+    "cta_browse": "İlanları Görüntüle",
+    "trust_verified": "Doğrulanmış işverenler",
+    "trust_quality": "Kaliteli ilanlar",
+    "trust_rated": "Yüksek memnuniyet"
   }
 }

@@ -5,18 +5,59 @@
   },
   "nav": {
     "jobs": "Jobs",
-    "employer": "Employer"
+    "employer": "Employer Login",
+    "home": "Home"
   },
   "jobs": {
     "empty": "No live jobs right now.",
-    "apply": "Apply"
+    "apply": "Apply Now",
+    "next": "Next",
+    "prev": "Previous",
+    "page": "Page"
+  },
+  "filters": {
+    "title": "Filters",
+    "city": "City",
+    "category": "Category",
+    "remote": "Work Type",
+    "all_cities": "All Cities",
+    "all_categories": "All Categories",
+    "all_types": "All Types",
+    "remote_opt_remote": "Remote",
+    "remote_opt_hybrid": "Hybrid",
+    "remote_opt_onsite": "On-site",
+    "clear": "Clear"
   },
   "home": {
+    "hero_badge": "Northern Cyprus's largest job platform",
+    "hero_title": "Find Your Dream Job in Northern Cyprus",
+    "hero_subtitle": "Discover the perfect match from hundreds of active listings. Fast, easy, and free.",
+    "search_placeholder": "Search position, keyword or company...",
+    "search_city": "Select city",
+    "search_category": "Select category",
+    "search_button": "Search Jobs",
+    "stat_employment": "Active Employment",
+    "stat_cities": "Cities",
+    "stat_categories": "Categories",
+    "features_title": "Why İşBulKıbrıs?",
+    "features_subtitle": "Designed for job seekers and employers in Northern Cyprus",
     "candidates_title": "Candidates",
-    "candidates_desc": "Discover the best job opportunities in Northern Cyprus",
+    "candidates_desc": "Discover the best job opportunities in Northern Cyprus, apply with one click",
     "employers_title": "Employers",
-    "employers_desc": "Find and hire the most talented candidates",
+    "employers_desc": "Find and hire the most talented candidates quickly",
     "fast_title": "Fast",
-    "fast_desc": "Easy and quick job application process"
+    "fast_desc": "Easy and quick job application process, instant feedback",
+    "how_title": "How It Works",
+    "how_subtitle": "Three simple steps to find your job",
+    "step1_title": "Explore Jobs",
+    "step1_desc": "Find listings that match you with city and category filters",
+    "step2_title": "Apply",
+    "step2_desc": "Quick one-click application, share your CV",
+    "step3_title": "Start Working",
+    "step3_desc": "Connect with employers and start your career",
+    "cta_browse": "Browse Jobs",
+    "trust_verified": "Verified employers",
+    "trust_quality": "Quality listings",
+    "trust_rated": "High satisfaction"
   }
 }
